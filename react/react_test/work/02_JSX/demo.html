@@ -16,7 +16,22 @@
   /*
    功能: 动态展示列表数据
    */
-  
+  const list = [
+    'jQuery',
+    'zepto',
+    'angular',
+    'react',
+    'vue',
+  ];
+
+  const elem1 = <ul>
+    {
+      list.map((data, index) => <li key={index}>{data}</li>)
+    }
+  </ul>;
+
+  ReactDOM.render(elem1, document.getElementById('example1'));
+
 </script>
 </body>
 </html>
