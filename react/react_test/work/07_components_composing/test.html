@@ -65,7 +65,9 @@
       const {length} = this.props;
       return (
           <div>
-            <input type="text" ref={input => this.input = input}/>
+            <label>
+              <input type="text" ref={input => this.input = input}/>
+            </label>
             <input type="button" value={`add${length + 1}`}
                    onClick={this.handleAdd}/>
           </div>
@@ -79,10 +81,6 @@
   };
 
   class List extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-
     render() {
       const {toDos} = this.props;
       return (
